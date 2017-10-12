@@ -9,3 +9,4 @@ Script that performs the upgrate of the operating system to Windows 10, the scri
   - Migrate the drivers from the existing installation during the upgrade [Command line option: **/migratedrivers all**]
   - Skips OOBE and selects the default settings [Command line option: **/showoobe none**]
   - Setup does not capture and report installation data [Command line option: **/telemetry disable**]
+## InjectionUpdateToW10InstallWim.cmd
