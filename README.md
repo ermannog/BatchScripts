@@ -3,4 +3,4 @@ Scripts batch collection for:
 - Windows Update
 - Windows Session
 - Network
-- OS (Operating System)
+- Operating System
