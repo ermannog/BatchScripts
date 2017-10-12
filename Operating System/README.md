@@ -5,6 +5,6 @@ Script that performs the upgrate of the operating system to Windows 10, the scri
 - Copy source files from a network share Mapping a temporary drive to local system drive
 - Start upgrade to Windows 10 excuting the setup from the local system drive copy with the following options:
 
-...-  */auto upgrade* Performs an upgrade of Windows saving apps and data
+-...  */auto upgrade* Performs an upgrade of Windows saving apps and data
 
 
