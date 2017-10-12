@@ -6,6 +6,7 @@ Script that performs the upgrate of the operating system to Windows 10, the scri
 - Start upgrade to Windows 10 excuting the setup from the local system drive copy with the following options:
 
    **/auto upgrade** Performs an upgrade of Windows saving apps and data
+   
    **/DynamicUpdate enable** Perform Dynamic Update operations (search, download, and install updates)
 
 
