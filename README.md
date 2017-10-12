@@ -1,6 +1,6 @@
 # Batch Scripts
 Scripts batch collection for:
-- Windows Update
-- Windows Session
 - Network
 - Operating System
+- Windows Update
+- Windows Session
