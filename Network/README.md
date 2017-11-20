@@ -13,4 +13,4 @@ Script that performs the reset of the network connection excuting the following 
 - Refreshes all DHCP leases and reregisters DNS names
 
 ## SetIEProxy.cmd
-Script that performs the set of the proxy in Internet Explorer. For more details see the post [a link](Impostazione proxy tramite script)
+Script that performs the set of the proxy in Internet Explorer. For more details see the post [Impostazione proxy tramite script](https://www.devadmin.it/2016/11/17/impostazione-proxy-tramite-script/)
