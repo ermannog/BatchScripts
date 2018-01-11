@@ -4,3 +4,4 @@ Scripts batch collection for:
 - Operating System
 - Windows Update
 - Windows Session
+- WSUS
