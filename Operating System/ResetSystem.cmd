@@ -4,3 +4,6 @@ winmgmt /resetrepository
 
 REM Reset Winsock
 NETSH winsock reset
+
+REM Restart computer
+shutdown -r -t 0
