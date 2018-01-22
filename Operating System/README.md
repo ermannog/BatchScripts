@@ -16,3 +16,8 @@ Script that performs the injection of an update in an Windows 10 image file (ins
 - Inject the Update
 - Save and unmount the image
 - Clean stale or corrupted files if issue with the mount points occurs
+## ResetSystem.cmd
+Script that performs the following operations:
+- Reset WMI Repository
+- Reset Winsock
+- Restart system
