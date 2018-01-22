@@ -20,4 +20,4 @@ Script that performs the injection of an update in an Windows 10 image file (ins
 Script that performs the following operations:
 - Reset WMI Repository
 - Reset Winsock
-- Restart system
+- Restart computer
