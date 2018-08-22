@@ -21,9 +21,22 @@ IF "%pid%" NEQ "0" (
 ECHO *** Delete directory %windir%\SoftwareDistribution ***
 RMDIR /S /Q %windir%\SoftwareDistribution
 
-ECHO *** Start services wuauserv and bits ***
+ECHO *** Stop service cryptsvc ***
+NET STOP cryptsvc
+
+ECHO *** Kill process service cryptsvc ***
+FOR /F "tokens=3" %%A IN ('sc queryex cryptsvc ^| FINDSTR PID') DO (SET pid=%%A)
+IF "%pid%" NEQ "0" (
+  ECHO taskkill /F /PID %pid%
+)
+
+ECHO *** Delete directory %windir%\system32\catroot2 ***
+RMDIR /S /Q %windir%\system32\catroot2
+
+ECHO *** Start services wuauserv, bits and cryptsvc ***
 NET START wuauserv
 NET START bits
+NET START cryptsvc
 
 ECHO *** Start search updates ***
 wuauclt.exe /resetauthorization /detectnow
