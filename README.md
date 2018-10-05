@@ -6,6 +6,7 @@ Scripts batch collection for:
 - Network
 - Operating System
 - Security
+- Storage
 - Windows Update
 - Windows Session
 - WSUS
