@@ -1,5 +1,8 @@
 # Batch Scripts for Acrobat Reader 2017 Classic Track
 
+## SlipStream-AcrobatReader2017-1701130144.cmd
+Script that performs the creation of msi for [Acrobat Reader 2017 base release (AcroRdr20171700830051_MUI.exe)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/classic/dcclassic2017base.html) with the slipstream of the update [17.011.30144 (AcroRdr2017Upd1701130144_MUI.msp)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/classic/dcclassic17.011august2019.html).
+
 ## SlipStream-AcrobatReader2017-1701130142.cmd
 Script that performs the creation of msi for [Acrobat Reader 2017 base release (AcroRdr20171700830051_MUI.exe)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/classic/dcclassic2017base.html) with the slipstream of the update [17.011.30142 (AcroRdr2017Upd1701130142_MUI.msp)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/classic/dcclassic17.011may2019.html).
 
