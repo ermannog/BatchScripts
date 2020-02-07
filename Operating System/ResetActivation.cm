@@ -1,0 +1,8 @@
+REM  Uninstall the current product key from Windows and put it into an unlicensed state
+slmgr /upk
+
+REM Remove the product key from the registry
+slmgr /cpky 
+
+REM Reset the Windows activation timers
+slmgr /rearm
