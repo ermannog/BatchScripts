@@ -28,7 +28,7 @@ Script that performs the injection of an update in an Windows 10 image file (ins
 - Inject the Update
 - Save and unmount the image
 - Clean stale or corrupted files if issue with the mount points occurs
-## ResetSystem.cmd
+## ResetActivation.cmd
 Script that performs the following operations:
 - Uninstall  current product key
 - Remove product key from the registry
