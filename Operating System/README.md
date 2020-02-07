@@ -30,6 +30,11 @@ Script that performs the injection of an update in an Windows 10 image file (ins
 - Clean stale or corrupted files if issue with the mount points occurs
 ## ResetSystem.cmd
 Script that performs the following operations:
+- Uninstall  current product key
+- Remove product key from the registry
+- Reset Windows activation timers
+## ResetSystem.cmd
+Script that performs the following operations:
 - Reset WMI Repository
 - Reset Winsock
 - Restart computer
