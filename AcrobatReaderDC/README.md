@@ -1,5 +1,8 @@
 # Batch Scripts for Acrobat Reader DC Continuous Track
 
+## SlipStream-AcrobatReaderDC-2000920074.cmd
+Script that performs the creation of msi for [Acrobat Reader DC base release (AcroRdrDC1500720033_MUI.exe)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuous.html) with the slipstream of the update [20.009.20074 (AcroRdrDCUpd2000920074_MUI.msp)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuousmay2020qfe3.html).
+
 ## SlipStream-AcrobatReaderDC-1902120061.cmd
 Script that performs the creation of msi for [Acrobat Reader DC base release (AcroRdrDC1500720033_MUI.exe)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuous.html) with the slipstream of the update [19.021.20061 (AcroRdrDCUpd1902120061_MUI.msp)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuousdec2019qfe.html).
 
