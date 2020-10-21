@@ -5,6 +5,7 @@ Scripts batch collection for:
 - Java
 - Network
 - Operating System
+- Printing
 - Security
 - Storage
 - Windows Update
