@@ -1,5 +1,8 @@
 # Batch Scripts for network tasks
 
+## ResetNetworkAdapers.cmd
+Script that perform the reset of the resetting your network adapters settings
+
 ## ResetNetworkConnection.cmd
 Script that performs the reset of the network connection excuting the following steps:
 - Restores the Winsock Catalog to a clean state and uninstalls all Winsock Layered Service Providers
