@@ -12,6 +12,9 @@ netsh advfirewall reset
 REM Resets Winsock Catalog to a clean state
 netsh winsock reset
 
+REM Flush the dns cache
+ipconfig /flushdns
+
 Pause
 
 REM Restart the computer
