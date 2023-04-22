@@ -39,4 +39,4 @@ Script that performs the following operations:
 - Reset Winsock
 - Restart computer
 ## Write-UserSessionLogs.cmd
-Creates log files named username@computername.txt and computername#username.txt containing the history of user sessions
+Creates log files named 'username@computername.txt' and 'computername#username.txt' containing the history of user sessions
