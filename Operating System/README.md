@@ -28,6 +28,8 @@ Script that performs the injection of an update in an Windows 10 image file (ins
 - Inject the Update
 - Save and unmount the image
 - Clean stale or corrupted files if issue with the mount points occurs
+## LogUserSession.cmd
+Creates log files named 'username@computername.txt' and 'computername#username.txt' containing the history of user sessions
 ## ResetActivation.cmd
 Script that performs the following operations:
 - Uninstall  current product key
@@ -38,5 +40,3 @@ Script that performs the following operations:
 - Reset WMI Repository
 - Reset Winsock
 - Restart computer
-## Write-UserSessionLogs.cmd
-Creates log files named 'username@computername.txt' and 'computername#username.txt' containing the history of user sessions
