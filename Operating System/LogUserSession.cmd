@@ -1,6 +1,6 @@
 :: Purpose:  Creates log files named computername.username containing the history of user sessions
 :: Author:   Ermanno Goletto
-:: Revision: 5.0 
+:: Revision: 6.0 
 
 @ECHO OFF
 SETLOCAL ENABLEDELAYEDEXPANSION
@@ -33,10 +33,17 @@ FOR /F "SKIP=1 TOKENS=1,2,6,7 DELIMS=> " %%a IN ('QUERY USER') DO (
   SET LogonDay=%%c
   SET LogonHour=%%d
 
-  REM Creazione testo Log
-  SET LogText=%YEAR%-%MONTH%-%DAY% %HOUR%:%MINUTE% Session: !Session! - Logon: !LogonDay! !LogonHour! - IP:
+  REM Creazione testo Log - Data esecuzione
+  SET LogText=%YEAR%-%MONTH%-%DAY% %HOUR%:%MINUTE%
 
-  REM Ricerca indirizzi IP
+  REM Creazione testo Log - Sessione
+  SET LogText=!LOGTEXT! Session: !Session!
+
+  REM Creazione testo Log - Data logon
+  SET LogText=!LOGTEXT! - Logon: !LogonDay! !LogonHour!
+
+  REM Creazione testo Log - Indirizzi IP
+  SET LogText=!LOGTEXT! - IP:
   FOR /F "TOKENS=2 DELIMS=:" %%a IN ('IPCONFIG ^| FINDSTR IPv4') DO (SET LogText=!LOGTEXT!%%a)
   
   REM Creazione file Computer.Utente ordinato per data di log decrescente
