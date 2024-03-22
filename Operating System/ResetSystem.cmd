@@ -12,11 +12,11 @@ ECHO If you see (Disabled) next to a counter, you can enable it by running the f
 ECHO lodctr /e:[counter name]
 ECHO lodctr /r
 
-REM Reset IP
+ECHO Reset IP
 NETSH int ip reset 
 
-REM Reset Winsock
+ECHO Reset Winsock
 NETSH winsock reset
 
-REM Restart computer
-shutdown -r -t 0
+ECHO Restart computer
+shutdown -r -t 30
