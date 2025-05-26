@@ -41,4 +41,4 @@ Script that performs the following operations:
 - Reset Winsock
 - Restart computer
 ## StartStopScreensaver.cmd
-Strip for start the screensaver and stop it after a delay
+Script for start the screensaver and stop it after a delay
