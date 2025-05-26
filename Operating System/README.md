@@ -40,3 +40,5 @@ Script that performs the following operations:
 - Reset WMI Repository
 - Reset Winsock
 - Restart computer
+## StartStopScreensaver.cmd
+Strip for start the screensaver and stop it after a delay
