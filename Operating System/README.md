@@ -42,3 +42,5 @@ Script that performs the following operations:
 - Restart computer
 ## StartStopScreensaver.cmd
 Script for start the screensaver and stop it after a delay
+## Test-NTFS-Stream.cmd
+Script for test NTFS Alternate Data Stream
