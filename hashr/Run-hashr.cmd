@@ -86,5 +86,3 @@ FOR %%f IN ("%IoCSubFolder%\*.*") DO (
 )
 
 ECHO Analisi completata.
-
-PAUSE
