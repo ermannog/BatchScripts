@@ -6,6 +6,12 @@ Script that performs the extraction of msi for [Java SE Runtime Environment 8 Up
 ## ExtractMsi-jre-8u461-windows-i586.cmd
 Script that performs the extraction of msi for [Java SE Runtime Environment 8 Update 461 Windows x86 (jre-8u461-windows-i586.exe)](https://www.oracle.com/webapps/redirect/signon?nexturl=https://download.oracle.com/otn/java/jdk/8u461-b11/68ce765258164726922591683c51982c/jre-8u461-windows-i586.exe).
 
+## ExtractMsi-jre-8u441-windows-x64.cmd
+Script that performs the extraction of msi for [Java SE Runtime Environment 8 Update 441 Windows x64 (jre-8u441-windows-x64.exe)](https://download.oracle.com/otn/java/jdk/8u441-b07/7ed26d28139143f38c58992680c214a5/jre-8u441-windows-x64.exe).
+
+## ExtractMsi-jre-8u441-windows-i586.cmd
+Script that performs the extraction of msi for [Java SE Runtime Environment 8 Update 441 Windows x86 (jre-8u441-windows-i586.exe)](https://download.oracle.com/otn/java/jdk/8u441-b07/7ed26d28139143f38c58992680c214a5/jre-8u441-windows-i586.exe).
+
 ## ExtractMsi-jre-8u221-windows-x64.cmd
 Script that performs the extraction of msi for [Java SE Runtime Environment 8 Update 221 Windows x64 (jre-8u221-windows-x64.exe)](https://download.oracle.com/otn/java/jdk/8u221-b11/230deb18db3e4014bb8e3e8324f81b43/jre-8u221-windows-x64.exe).
 
