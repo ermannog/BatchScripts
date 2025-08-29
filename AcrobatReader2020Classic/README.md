@@ -1,7 +1,7 @@
 # Batch Scripts for Acrobat Reader 2020 Classic Track
 
 ## SlipStream-AcrobatReader2020-2000530774.cmd
-Script that performs the creation of msi for [Acrobat 2020 Release (Classic Track base release) (AcroRdr20202000130002_MUI.exe)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/classic/dcclassic2020base.html) with the slipstream of the [20.005.30774 Planned update, Jun 10, 202 (Acrobat2020Upd2000530774.msp)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/classic/dcclassic20.005jun2025.html).
+Script that performs the creation of msi for [Acrobat 2020 Release (Classic Track base release) (AcroRdr20202000130002_MUI.exe)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/classic/dcclassic2020base.html) with the slipstream of the [20.005.30774 Planned update, Jun 10, 2025 (Acrobat2020Upd2000530774.msp)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/classic/dcclassic20.005jun2025.html).
 
 ## SlipStream-AcrobatReader2020-2000530574.cmd
 Script that performs the creation of msi for [Acrobat 2020 Release (Classic Track base release) (AcroRdr20202000130002_MUI.exe)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/classic/dcclassic2020base.html) with the slipstream of the [20.005.30574 Planned update, Feb 13, 2024 (AcroRdr2020Upd2000530574_MUI.msp)](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/classic/dcclassic20.005feb2024.html#planned-update-feb-13-2024).
