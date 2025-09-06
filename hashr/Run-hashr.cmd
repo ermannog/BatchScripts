@@ -2,7 +2,7 @@
 :: Author:		Ermanno Goletto
 :: Requirements:	I file contenenti gli hash degli IoC devono essere presenti nella subdirectory IoC della cartella da cui viene avviato lo script batch
 :: Requirements:	Il tool hashr deve essere presente nella cartella da cui viene avviato lo script batch
-:: Revision:		1.2
+:: Revision:		1.3
 
 @echo off
 setlocal enabledelayedexpansion
@@ -28,7 +28,7 @@ REM *** Controlla se la cartella IOC esiste.
 SET IoCSubFolder=%~dp0IoC
 IF NOT EXIST "%IoCSubFolder%" (
   CALL :Log "La cartella %IoCSubFolder% non è stata trovata."
-  GOTO :eof
+  GOTO :End
 )
 
 REM *** Creazione cartella Out.
@@ -36,7 +36,7 @@ SET OutSubFolder=%~dp0Out
 IF NOT EXIST "%OutSubFolder%" MKDIR "%OutSubFolder%"
 IF NOT ERRORLEVEL 0 (
   CALL :Log "Errore durante la creazione della cartella %OutSubFolder%."
-  GOTO :eof
+  GOTO :End
 )
 
 REM *** Creazione cartella LOG.
@@ -44,7 +44,7 @@ SET LogSubFolder=%~dp0Log
 IF NOT EXIST "%LogSubFolder%" MKDIR "%LogSubFolder%"
 IF NOT ERRORLEVEL 0 (
   CALL :Log "Errore durante la creazione della cartella %LogSubFolder%."
-  GOTO :eof
+  GOTO :End
 )
 
 CALL :Log "Ricerca file IoC nella cartella %IoCSubFolder% ..."
@@ -93,6 +93,7 @@ FOR %%f IN ("%IoCSubFolder%\*.*") DO (
 )
 
 CALL :Log "Analisi completata."
+:End
 EXIT /b
 
 :Log
