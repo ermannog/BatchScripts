@@ -2,15 +2,18 @@
 :: Author:		Ermanno Goletto
 :: Requirements:	I file contenenti gli hash degli IoC devono essere presenti nella subdirectory IoC della cartella da cui viene avviato lo script batch
 :: Requirements:	Il tool hashr deve essere presente nella cartella da cui viene avviato lo script batch
-:: Revision:		1.3
+:: Revision:		1.4
 
-@echo off
+REM @echo off
 setlocal enabledelayedexpansion
 
 REM *** Impostazioni Costanti
-SET RootFolder=%SystemDrive%\
 SET IoCAbsent=IoCAbsent
 SET PathFileLog=%~dp0%~n0.log
+
+REM *** Gestione parametri
+SET "RootFolder=%~1"
+IF "%RootFolder%"=="" SET "RootFolder=%SystemDrive%\"
 
 REM *** Impostazioni varabili 
 SET MONTH=%DATE:~3,2%
@@ -23,6 +26,12 @@ ECHO.>"%PathFileLog%"
 
 CALL :Log "Avvio Analisi presenza IoC in %RootFolder%."
 
+REM *** Controlla che il tool hashr.exe esiste.
+SET PathHashr=%~dp0hashr.exe
+IF NOT EXIST "%PathHashr%" (
+  CALL :Log "Il tool %PathHashr% non è stato trovato."
+  GOTO :End
+)
 
 REM *** Controlla se la cartella IOC esiste.
 SET IoCSubFolder=%~dp0IoC
@@ -65,7 +74,7 @@ FOR %%f IN ("%IoCSubFolder%\*.*") DO (
   ) ELSE (
   
     REM Esegui il comando hashr.exe.
-    START /BELOWNORMAL /B /WAIT %~dp0hashr.exe --hashlist "%%f" --rootdir %RootFolder% --output "!OutFile!" --log "%LogSubFolder%\!IoCFileName!.%COMPUTERNAME%.log"
+    START /BELOWNORMAL /B /WAIT "Un hashr" "%PathHashr%" --hashlist "%%f" --rootdir "%RootFolder%" --output "!OutFile!" --log "%LogSubFolder%\!IoCFileName!.%COMPUTERNAME%.log"
 
     REM *** Controlla che non si siano verificati errori.
     IF !ERRORLEVEL! NEQ 0 (
