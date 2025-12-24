@@ -2,7 +2,7 @@
 :: Author:		Ermanno Goletto
 :: Requirements:	I file contenenti gli hash degli IoC devono essere presenti nella subdirectory IoC della cartella da cui viene avviato lo script batch
 :: Requirements:	Il tool hashr deve essere presente nella cartella da cui viene avviato lo script batch
-:: Revision:		1.4
+:: Revision:		1.5
 
 REM @echo off
 setlocal enabledelayedexpansion
@@ -106,9 +106,9 @@ CALL :Log "Analisi completata."
 EXIT /b
 
 :Log
-SET "yyyy=%DATE:~6,4%"
-SET "MM=%DATE:~3,2%"
-SET "dd=%DATE:~0,2%"
+SET "year=%DATE:~6,4%"
+SET "month=%DATE:~3,2%"
+SET "day=%DATE:~0,2%"
 SET "hh=%TIME:~0,2%"
 SET "hh=!hh: =0!"
 SET "mm=%TIME:~3,2%"
@@ -116,5 +116,6 @@ SET "mm=!mm: =0!"
 SET "ss=%TIME:~6,2%"
 SET "ss=!ss: =0!"
 ECHO %~1
->>"%PathFileLog%" ECHO [!yyyy!-!MM!-!dd! !hh!:!!mm!:!ss!] %~1
+>>"%PathFileLog%" ECHO [!year!-!month!-!day! !hh!:!!mm!:!ss!] %~1
+
 EXIT /b
