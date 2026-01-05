@@ -2,7 +2,7 @@
 :: Author:		Ermanno Goletto
 :: Requirements:	I file contenenti gli hash degli IoC devono essere presenti nella subdirectory IoC della cartella da cui viene avviato lo script batch
 :: Requirements:	Il tool hashr deve essere presente nella cartella da cui viene avviato lo script batch
-:: Revision:		1.6
+:: Revision:		1.8
 
 REM @echo off
 setlocal enabledelayedexpansion
@@ -13,7 +13,13 @@ SET PathFileLog=%~dp0%~n0.log
 
 REM *** Gestione parametri
 SET "RootFolder=%~1"
-IF "%RootFolder%"=="" SET "RootFolder=%SystemDrive%\"
+IF "%RootFolder%"=="" ( SET "RootFolder=%SystemDrive%\" )
+ECHO %RootFolder%| FINDSTR /c:" " >NUL
+IF %ERRORLEVEL% EQU 0 (
+  REM Se il path contiene uno spazio lo si racchiude tra virgolette
+  SET "RootFolder="%RootFolder%""
+)
+
 
 REM *** Impostazioni varabili 
 SET MONTH=%DATE:~3,2%
@@ -73,8 +79,8 @@ FOR %%f IN ("%IoCSubFolder%\*.*") DO (
 
   ) ELSE (
   
-    REM Esegui il comando hashr.exe.
-    START /BELOWNORMAL /B /WAIT "Un hashr" "%PathHashr%" --hashlist "%%f" --rootdir "%RootFolder%" --output "!OutFile!" --log "%LogSubFolder%\!IoCFileName!.%COMPUTERNAME%.log"
+    REM Esegue il comando hashr.exe.
+    START /BELOWNORMAL /B /WAIT "hashr" "%PathHashr%" --hashlist "%%f" --rootdir %RootFolder% --output "!OutFile!" --log "%LogSubFolder%\!IoCFileName!.%COMPUTERNAME%.log"
 
     REM *** Controlla che non si siano verificati errori.
     IF !ERRORLEVEL! NEQ 0 (
@@ -87,10 +93,10 @@ FOR %%f IN ("%IoCSubFolder%\*.*") DO (
 
       REM *** Ridenominazioe file di output.
       IF !OutFileSize! EQU 0 (
-        CALL :Log "Il file !OutFile! e' vuoto, non sono stati rivelati IoC."
+        CALL :Log "Non sono stati rilevati IoC presenti in %%f."
         MOVE /Y "!OutFile!" "!OutFile!.%IoCAbsent%.%YEAR%-%MONTH%-%DAY%"
       ) ELSE (
-        CALL :Log "Il file !OutFile! non e' vuoto, sono stati rivelati IoC."
+        CALL :Log "Attenzione sono stati rilevati IoC presenti in %%f"
         MOVE /Y "!OutFile!" "!OutFile!.IoCFound.%YEAR%-%MONTH%-%DAY%.txt"
         MSG * /time:0 "Attenzione Rilevati IoC '!IoCFileName!', avvertire gli amministratori di sistema."
       )
