@@ -6,5 +6,8 @@ Requirements for running the batch script:
 - The script by default scans the system drive, which is the volume identified by the %SystemDrive% environment variable.
 - If necessary, you can also start the script by specifying a specific path in which to perform the analysis.
 
-Below is an example of how to start the script specifying to run the analysis in the current path:
-'CALL Run-hashr.cmd "%cd%"'
+# Examples
+
+**EXAMPLE 1:**  *Start the script specifying to run the analysis in the current path*
+
+CALL Run-hashr.cmd "%cd%"
