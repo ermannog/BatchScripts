@@ -2,7 +2,7 @@
 :: Author:		Ermanno Goletto
 :: Requirements:	I file contenenti gli hash degli IoC devono essere presenti nella subdirectory IoC della cartella da cui viene avviato lo script batch
 :: Requirements:	Il tool hashr deve essere presente nella cartella da cui viene avviato lo script batch
-:: Revision:		1.5
+:: Revision:		1.6
 
 REM @echo off
 setlocal enabledelayedexpansion
@@ -78,7 +78,7 @@ FOR %%f IN ("%IoCSubFolder%\*.*") DO (
 
     REM *** Controlla che non si siano verificati errori.
     IF !ERRORLEVEL! NEQ 0 (
-      CALL :Log "Si sono verificati errori durante l'analisi dell'IoC %%f."
+      CALL :Log "Si sono verificati errori durante l'analisi dell'IoC %%f [Errore !ERRORLEVEL!]."
       TYPE NUL > !OutFile!.IoCError.%YEAR%-%MONTH%-%DAY%
     ) ELSE (
 
@@ -117,5 +117,4 @@ SET "ss=%TIME:~6,2%"
 SET "ss=!ss: =0!"
 ECHO %~1
 >>"%PathFileLog%" ECHO [!year!-!month!-!day! !hh!:!!mm!:!ss!] %~1
-
 EXIT /b
