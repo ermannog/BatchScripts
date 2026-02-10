@@ -33,3 +33,4 @@ Script that performs the extraction of msi for [Java SE Runtime Environment 8 Up
 # Java SE Runtime Environment 8 Downloads
 - [Java SE Runtime Environment last version](https://www.oracle.com/technetwork/java/javase/jre8-downloads-2133155.html)
 - [Java SE Archive](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+- [Evergreen App Tracker - Oracle Java 8](https://stealthpuppy.com/apptracker/apps/o/oraclejava8/)
