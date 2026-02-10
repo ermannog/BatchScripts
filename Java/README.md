@@ -1,4 +1,10 @@
-# Batch Scripts for extract msi of Java SE (Standard Edition) Runtime Environment 
+# Batch Scripts for extract msi of Java SE (Standard Edition) Runtime Environment
+
+## ExtractMsi-jre-8u481-windows-x64.cmd
+Script that performs the extraction of msi for [Java SE Runtime Environment 8 Update 481 Windows x64 (jre-8u481-windows-x64.exe)](https://javadl.oracle.com/webapps/download/GetFile/1.8.0_481-b10/0d06828d282343ea81775b28020a7cd3/windows-i586/jre-8u481-windows-x64.exe).
+
+## ExtractMsi-jre-8u481-windows-i586.cmd
+Script that performs the extraction of msi for [Java SE Runtime Environment 8 Update 481 Windows x86 (jre-8u481-windows-i586.exe)](https://javadl.oracle.com/webapps/download/GetFile/1.8.0_481-b10/0d06828d282343ea81775b28020a7cd3/windows-i586/jre-8u481-windows-i586.exe).
 
 ## ExtractMsi-jre-8u461-windows-x64.cmd
 Script that performs the extraction of msi for [Java SE Runtime Environment 8 Update 461 Windows x64 (jre-8u461-windows-x64.exe)](https://www.oracle.com/webapps/redirect/signon?nexturl=https://download.oracle.com/otn/java/jdk/8u461-b11/68ce765258164726922591683c51982c/jre-8u461-windows-x64.exe).
